@@ -13,19 +13,25 @@
 /*Normalize*/
 
 body {
-    margin: 0;
-    padding: 0;
+    background-color: var(--bg-color);
     box-sizing: border-box;
     font-family: "Raleway", sans-serif;
-    background-color: var(--bg-color);
+    margin: 0;
+    padding: 0;
     scroll-behavior: smooth;
 }
 
+h1,
+p {
+    margin: 8px 0px 8px 0px;
+}
+
 /*Padrão de projeto*/
+
 textarea:focus,
 input:focus {
-    box-shadow: 0 0 0 0;
     border: 0 none;
+    box-shadow: 0 0 0 0;
     outline: 0;
 }
 
@@ -36,10 +42,10 @@ textarea::placeholder {
 }
 
 a {
-    text-decoration: none;
     color: var(--azul-destaque);
-    font-weight: 800;
     font-family: "Raleway", sans-serif;
+    font-weight: 800;
+    text-decoration: none;
 }
 
 button {
@@ -49,73 +55,59 @@ button {
 /*Header Geral*/
 
 header {
-    padding: 30px;
     background-color: var(--texto-destaque);
+    margin: 0 auto;
+    padding: 20px;
 }
 
 nav {
-    display: flex;
     align-items: center;
-    justify-content: space-around;
+    display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 
 /*Divs do Header*/
 
-.logo-busca {
-    width: 601px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 .logo {
-    display: flex;
     align-items: center;
+    display: flex;
+    order: 1;
 }
 
 .logo img {
-    height: 29.17px;
-    width: 40.02px;
+    height: 27.17px;
+    width: 38.02px;
 }
 
-.logo p {
-    font-size: 26px;
+.logo span {
+    font-size: 20px;
     font-weight: bolder;
 }
 
 .logo .logo-azul {
-    margin-left: 10px;
     color: var(--azul-destaque);
+    margin-left: 3.5px;
 }
 
-.logo-busca input {
-    margin-left: 10%;
-    width: 393px;
-    height: 40px;
-    border-radius: 30px;
-    padding: 1% 3%;
-    border: none;
-    background-color: var(--input-bg);
-    background-image: url(../img/lupa.png);
+.busca {
     background-repeat: no-repeat;
-    background-position: right;
-    background-position-x: 320px;
+    border: none;
+    border-radius: 30px;
 }
 
 .login {
-    width: 600px;
     display: flex;
-    justify-content: end;
+    justify-content: center;
 }
 
 .login button {
-    width: 182px;
-    height: 51px;
     background: none;
     border: solid 1px var(--azul-destaque);
     color: var(--azul-destaque);
-    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 500;
+    height: 48px;
 }
 
 .login button:hover {
@@ -126,42 +118,39 @@ nav {
 /*Banner Promocional*/
 
 .destaque {
-    height: 315px;
     background-image: url(../img/banner-image.png);
-    background-size: 100vw;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    padding: 32px 32px 0px 32px;
+    padding: 32px 32px 0px 20px;
+    position: relative;
 }
 
 .banner {
-    width: 751px;
-    height: 261px;
-    padding-left: 120px;
+    bottom: 22px;
     display: flex;
     flex-direction: column;
+    height: auto;
     justify-content: end;
+    position: absolute;
 }
 
 .banner h1 {
     color: var(--texto-destaque);
-    font-size: 52px;
-    font-weight: bold;
-    text-shadow: 2px 2px 0px #323131, 5px 4px 0px rgb(0 0 0 / 15%);
+    font-weight: 700;
+    margin: 0;
 }
 
 .banner h4 {
     color: var(--texto-destaque);
-    font-size: 22px;
-    font-weight: bold;
-    text-shadow: 2px 2px 0px #323131, 5px 4px 0px rgb(0 0 0 / 15%);
+    font-weight: 600;
 }
 
 .banner button {
     background-color: var(--azul-destaque);
     border: none;
     color: var(--texto-destaque);
-    height: 51px;
-    width: 130px;
+    font-family: "Raleway", sans-serif;
 }
 
 /*Sessão de produtos*/
@@ -170,10 +159,10 @@ nav {
     display: flex;
     flex-direction: column;
     height: 100%;
-    margin: 0 auto;
 }
 
 /*Divs na Sessão Produtos*/
+
 .prod-titulo {
     align-items: center;
     display: flex;
@@ -182,23 +171,20 @@ nav {
 
 .prod-titulo .titulo {
     color: #464646;
-    font-size: 32px;
     font-weight: bold;
-    margin-left: 75px;
-    padding: 30px;
+    padding: 20px;
 }
 
 .mostrar-mais {
     color: var(--azul-destaque);
     display: flex;
     font-size: 16px;
-    font-weight: bold;
-    margin-top: 25px;
-    margin-right: 75px;
-    padding: 30px;
+    font-weight: 700;
+    padding: 20px;
 }
 
 .div-verTudo {
+    align-items: center;
     display: flex;
     gap: 0.4rem;
     margin-right: 10px;
@@ -207,17 +193,20 @@ nav {
 .sessao-produtos {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
     height: 100%;
-    justify-content: center;
-    padding: 0px 30px 30px 30px;
 }
 
 .produto {
     display: flex;
     flex-direction: column;
-    margin-bottom: 32px;
+    margin-bottom: 20px;
     padding: 0 5px;
+    height: 40%;
+}
+
+.produto img {
+    height: auto;
+    width: auto;
 }
 
 .verTudo {
@@ -227,20 +216,21 @@ nav {
 
 .product-name {
     color: #464646;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 500;
 }
 
 .preco {
     color: #464646;
-    font-weight: bold;
+    font-weight: 700;
     font-size: 16px;
+    margin: 6px 0;
 }
 
 .ver-produto {
     color: var(--azul-destaque);
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 img {
@@ -248,30 +238,18 @@ img {
     height: 174px;
 }
 
-h1,
-p {
-    margin: 8px 0px 8px 0px;
-}
-
 /*Form Contato*/
 
 .contato {
     background-color: var(--bg-contato);
-    display: flex;
-    height: 365px;
-    justify-content: center;
-    padding-top: 64px;
+    padding-top: 40px;
 }
 
 .referencia {
+    align-items: center;
     display: flex;
-    width: 350px;
-    margin: 20px 0 0 0;
-}
-
-.referencia img {
-    width: 60px;
-    height: 40px;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .img-crud {
@@ -279,89 +257,433 @@ p {
     height: 200px;
 }
 
-.referencia p {
-    font-size: 26px;
-    font-weight: bolder;
+.referencia span {
+    font-weight: 700;
+}
+
+.referencia .logo-azul {
     color: var(--azul-destaque);
-    margin-top: 5px;
-    margin-left: 6px;
+    margin-left: 3.5px;
 }
 
 .links-uteis {
     line-height: 40px;
+    text-align: center;
     width: 200px;
-    margin-right: 100px;
 }
 
 .links-uteis a {
     color: black;
-    font-weight: normal;
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+}
+
+.form-titulo {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.label-float {
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    justify-content: flex-end;
     position: relative;
-    width: 500px;
 }
 
-.form p {
-    font-weight: bolder;
-}
-
-.form input {
+.input-nome {
     border: transparent;
-    box-sizing: content-box;
+    border-bottom: solid 2px var(--input-placeholder);
+    border-radius: 4px;
+    box-sizing: border-box;
     color: var(--azul-destaque);
     font-size: 18px;
     height: 56px;
-    padding: 2.5% 2.7% 0.5%;
-    position: relative;
     margin-bottom: 20px;
-    width: 475px;
+    padding: 12px 12px 2px;
+    position: relative;
+    width: 100%;
 }
 
-.form input:hover {
+.input-nome:hover {
     border-bottom: solid 2px var(--azul-destaque);
     transition: linear 1s;
 }
 
 .label-nome {
-    color: var(--input-placeholder);
     font-size: 12px;
-    left: 11px;
+    left: 12px;
     position: absolute;
-    top: 41px;
-    transition: 0.5s;
-    width: 100%;
+    top: 5px;
 }
 
-.input-nome:focus+.label-nome {
-    color: var(--azul-destaque);
-    transition: 0.2s;
-    z-index: 2;
-}
-
-.form textarea {
+.mensagem {
     border: transparent;
+    border-bottom: solid 2px var(--input-placeholder);
     color: var(--azul-destaque);
     font-family: "Raleway", sans-serif;
+    font-size: 18px;
     margin-bottom: 20px;
-    width: 100%;
+    padding: 12px 12px 2px;
+    resize: none;
+}
+
+.mensagem:hover {
+    border-bottom: solid 2px var(--azul-destaque);
+    transition: linear 1s;
+}
+
+.mensagem::placeholder {
+    color: black;
+    padding-left: 4px;
 }
 
 .form button {
     background-color: var(--azul-destaque);
     border: none;
     color: var(--texto-destaque);
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
     height: 51px;
-    width: 180px;
+    margin-bottom: 40px;
 }
 
 .desenvolvedor {
     background-color: #ffffff;
     font-family: "Raleway", sans-serif;
-    font-size: 14px;
-    padding: 13px 0;
+    font-weight: 500;
+    padding: 20px 0;
     text-align: center;
+}
+
+@media screen and (min-width: 0) {
+
+    /*Divs do Header*/
+
+    .logo-busca {
+        align-items: center;
+        display: flex;
+        gap: 20%;
+        justify-content: space-between;
+    }
+
+    .busca {
+        background-image: url(../img/lupa-negro.png);
+        background-position: center;
+        height: 25px;
+        order: 3;
+        padding: 2% 3%;
+        width: 0;
+    }
+
+    .busca::placeholder {
+        visibility: hidden;
+    }
+
+    .login {
+        order: 2;
+    }
+
+    .login button {
+        width: 140px;
+    }
+
+    /*Banner Promocional*/
+
+    .destaque {
+        height: 250px;
+    }
+
+    .banner h1 {
+        font-size: 26.5px;
+        text-shadow: 2px 2px 0px #323131;
+    }
+
+    .banner h4 {
+        font-size: 15.5px;
+        margin: 15px 0;
+        text-shadow: 2px 1px 0px #323131;
+    }
+
+    .banner button {
+        font-size: 14px;
+        font-weight: 600;
+        height: 51px;
+        width: 150px;
+    }
+
+    /*Sessão de produtos*/
+
+    .geral-prods {
+        margin: 35px auto 0;
+    }
+
+    /*Divs na Sessão Produtos*/
+
+    .prod-titulo .titulo {
+        font-size: 32px;
+    }
+
+    .sessao-produtos {
+        gap: 0.1rem;
+        justify-content: space-evenly;
+    }
+
+    .produto {
+        width: 40%;
+    }
+
+    /*Form Contato*/
+
+    .contato {
+        justify-content: center;
+    }
+
+    .img-footer {
+        height: 45px;
+        width: 65px;
+    }
+
+    .referencia span {
+        font-size: 40px;
+    }
+
+    .links-uteis {
+        margin: 25px auto;
+    }
+
+    .links-uteis a {
+        padding: 3px 0;
+    }
+
+    .form {
+        padding: 0 20px 20px;
+    }
+
+    .form button {
+        width: 50%;
+    }
+
+    .desenvolvedor {
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    /*Divs do Header*/
+
+    .logo-busca {
+        margin: 0 15px;
+    }
+
+    .busca {
+        background-color: var(--input-bg);
+        background-image: url(../img/lupa.png);
+        background-position: right;
+        background-position-x: 94%;
+        height: 40px;
+        order: 2;
+        padding: 1% 2%;
+        width: 375px;
+    }
+
+    .busca::placeholder {
+        visibility: visible;
+    }
+
+    .busca:focus {
+        border: 1px solid var(--input-placeholder);
+    }
+
+    .login {
+        margin: 0 2% 0 1%;
+        order: 3;
+    }
+
+    .login button {
+        width: 160px;
+    }
+
+    /*Banner Promocional*/
+
+    .destaque {
+        height: 350px;
+    }
+
+    .banner {
+        padding-bottom: 15px;
+        padding-left: 20px;
+    }
+
+    .banner h1 {
+        font-size: 52px;
+        text-shadow: 3px 3px 0px #323131;
+    }
+
+    .banner h4 {
+        font-size: 22.5px;
+        font-weight: 500;
+        margin: 20px 0;
+        text-shadow: 3px 2px 0px #323131;
+    }
+
+    .banner button {
+        font-size: 16px;
+        font-weight: 500;
+        height: 48px;
+        width: 160px;
+    }
+
+    /*Sessão de produtos*/
+
+    .geral-prods {
+        margin: 35px 10px 0;
+    }
+
+    /*Divs na Sessão Produtos*/
+
+    .prod-titulo .titulo {
+        font-size: 27px;
+    }
+
+    .produto {
+        width: 20%;
+    }
+
+    /*Form Contato*/
+
+    .contato {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .contato-div {
+        margin-left: 40px;
+        width: 30%;
+    }
+
+    .img-footer {
+        width: 49px;
+    }
+
+    .referencia span {
+        font-size: 28px;
+    }
+
+    .links-uteis a {
+        padding: 2.5px 0;
+        text-align: left;
+    }
+
+    .form {
+        margin-left: 50px;
+        margin-right: 20px;
+        padding: 0 25px 20px 20px;
+        width: 60%;
+    }
+
+    .form button {
+        width: 45%;
+    }
+
+    .desenvolvedor {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    /*Divs do Header*/
+
+    .logo-busca {
+        margin-left: 65px;
+        margin-right: 0px;
+    }
+
+    .busca {
+        height: 42px;
+        width: 475px;
+    }
+
+    .login {
+        margin: 0 65px 0 1%;
+    }
+
+    /*Banner Promocional*/
+
+    .destaque {
+        height: 300px;
+    }
+
+    .banner {
+        padding-left: 70px;
+    }
+
+    .banner h1 {
+        font-size: 45px;
+    }
+
+    .banner h4 {
+        font-size: 18px;
+    }
+
+    .banner button {
+        height: 46px;
+        width: 145px;
+    }
+
+    /*Divs na Sessão Produtos*/
+
+    .prod-titulo .titulo {
+        font-size: 30px;
+        margin-left: 30px;
+    }
+
+    .mostrar-mais {
+        margin-right: 20px;
+    }
+
+    .sessao-produtos {
+        gap: 1.5rem;
+        justify-content: center;
+    }
+
+    .produto {
+        width: 12.5%;
+    }
+
+    /*Form Contato*/
+
+    .contato-div {
+        align-items: flex-start;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 50px;
+        margin-top: 10px;
+        width: 50%;
+    }
+
+    .links-uteis {
+        margin: 0 10px 0 30px;
+    }
+
+    .form {
+        margin-left: 60px;
+        margin-right: 100px;
+        width: 45rem;
+    }
+
+    .form button {
+        width: 13rem;
+    }
 }

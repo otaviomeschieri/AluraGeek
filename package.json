@@ -1,12 +1,20 @@
 {
   "name": "live-coding-alurageek",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "server": "json-server --watch db.json"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/otaviomeschieri/AluraGeek.git"
+  },
+  "bugs": {
+    "url": "https://github.com/otaviomeschieri/AluraGeek/issues"
+  },
+  "homepage": "https://github.com/otaviomeschieri/AluraGeek#readme",
+  "description": ""
 }
